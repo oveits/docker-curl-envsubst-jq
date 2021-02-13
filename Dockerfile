@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive
 
-# curl & jq
+# curl & jq & envsubst (included in gettext-base)
 RUN apt-get update -y \
   && apt-get install -y --no-install-recommends curl gettext-base jq bash dnsutils ca-certificates \
   && apt-get autoremove -y \
